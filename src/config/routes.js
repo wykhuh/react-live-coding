@@ -12,8 +12,8 @@ var PromptContainer = require('../containers/PromptContainer');
 var routes = (
   <Router history={browserHistory}>
     <Route path='/' component={Main}>
-      <Route path='/playerOne' component={PromptContainer} />
-      <Route path='/playerTwo/:playerOne' component={PromptContainer} />
+      <Route path='/playerOne' header="Player One" component={PromptContainer} />
+      <Route path='/playerTwo/:playerOne' header="Player Two" component={PromptContainer} />
       <IndexRoute component={Home} />
     </Route>
   </Router>
