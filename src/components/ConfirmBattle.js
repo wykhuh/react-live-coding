@@ -1,8 +1,8 @@
 var React = require('react');
 
-function ConfirmBattle() {
+function ConfirmBattle(props) {
   return(
-    <div>Confirm Battle</div>
+    props.isLoading  ? <p>Loading</p> : <div>Confirm Battle</div>
   )
 }
 
