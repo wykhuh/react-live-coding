@@ -12,7 +12,7 @@ var Prompt = React.createClass({
               <input
                 type="text"
                 className="form-control"
-                value={this.props.username}
+                value={ 
                 onChange={this.props.onUpdateUser}
                 placeholder="Github Username"/>
             </div>
