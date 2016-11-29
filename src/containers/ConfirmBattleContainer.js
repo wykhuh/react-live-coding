@@ -1,5 +1,6 @@
 var React = require('react');
 var ConfirmBattle = require('../components/ConfirmBattle');
+require('../utils/githubHelpers');
 
 var ConfirmBattleContainer = React.createClass({
   getInitialState: function() {
