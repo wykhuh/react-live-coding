@@ -9,17 +9,17 @@ function getUserInfo(username) {
   return axios.get('https://api.github.com/users/' + username + param);
 }
 
-getUserInfo('wykhuh')
-.then(function(res){
-  // headers - show your rate limit
-  // data - info about the user
-  console.log('github', res)
-})
-
 var helpers = {
-  getPlayersInfo: function() {
-    // fetch data from github
-  }
+  getPlayersInfo: function(players) {
+    return axios.all(
+      [getUserInfo(players[0]), getUserInfo(players[1])],
+    ).then(function(info) {
+      return [info[0].data, info[1].data];
+    })
+    .catch(function(err) {
+      console.warn('error in getPlayersInfo', err);
+    });
+  },
 };
 
 module.exports = helpers;
